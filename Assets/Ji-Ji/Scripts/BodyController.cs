@@ -8,10 +8,11 @@ public class BodyController : MonoBehaviour
 {
     [SerializeField] private Animator animator;
     public float WalkSpeed, TurnSpeed, Friction;
+    [SerializeField] private GameObject torsoNode, hand;
     private CharacterController characterController;
 
     private Vector3 velocity;
-    private float walkAxis, turnAxis, strafeAxis;
+    private float walkAxis, turnAxis, strafeAxis, mouseX, mouseY;
     private float angularVelocity;
     
     private void Awake()
@@ -26,6 +27,8 @@ public class BodyController : MonoBehaviour
         walkAxis = Input.GetAxisRaw("Vertical");
         turnAxis = Input.GetAxisRaw("Horizontal");
         strafeAxis = Input.GetAxisRaw("Strafe");
+        mouseX = Input.GetAxis("Mouse X");
+        
         
         Vector3 relativeForward = transform.forward * walkAxis;
         Vector3 relativeStrafe = transform.right * strafeAxis;
@@ -44,6 +47,7 @@ public class BodyController : MonoBehaviour
         
         angularVelocity = Mathf.LerpAngle(angularVelocity, turnAxis * TurnSpeed * Time.deltaTime, Friction);
         transform.Rotate(Vector3.up, angularVelocity);
+        torsoNode.transform.Rotate(-Vector3.right, mouseX * Time.deltaTime * 120.0f);
 
         Vector3 newSpeed = Vector3.Lerp(velocity, relativeForward * WalkSpeed + relativeStrafe * WalkSpeed, Friction);
         velocity = new Vector3(newSpeed.x, -9.81f, newSpeed.z);

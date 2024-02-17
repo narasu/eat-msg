@@ -50,6 +50,8 @@ MonoBehaviour:
   WalkSpeed: 3
   TurnSpeed: 125
   Friction: 0.05
+  torsoNode: {fileID: 4933858312904553093}
+  hand: {fileID: 0}
 --- !u!143 &4813998931512269298
 CharacterController:
   m_ObjectHideFlags: 0
@@ -132,7 +134,12 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: 1d4bc7b04c8914e44b6b5a305cace7c3, type: 2}
+      objectReference: {fileID: 0}
+    - target: {fileID: 95509902755735526, guid: d6d06c887a1aae94f8c6e8cc2c0c557b,
+        type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -141,6 +148,12 @@ PrefabInstance:
 --- !u!4 &4930640048110752827 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4759721911903040, guid: d6d06c887a1aae94f8c6e8cc2c0c557b,
+    type: 3}
+  m_PrefabInstance: {fileID: 4935329401118996347}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &4933858312904553093 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1506398239557118, guid: d6d06c887a1aae94f8c6e8cc2c0c557b,
     type: 3}
   m_PrefabInstance: {fileID: 4935329401118996347}
   m_PrefabAsset: {fileID: 0}
