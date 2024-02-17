@@ -442,11 +442,33 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 4025030847401219072, guid: e397323928af987468249c710da6e91f,
+        type: 3}
+      propertyPath: hand
+      value: 
+      objectReference: {fileID: 1095248446050768434}
+    - target: {fileID: 4025030847401219072, guid: e397323928af987468249c710da6e91f,
+        type: 3}
+      propertyPath: MovementBounds
+      value: 
+      objectReference: {fileID: 862538117083420623}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e397323928af987468249c710da6e91f, type: 3}
+--- !u!135 &862538117083420623 stripped
+SphereCollider:
+  m_CorrespondingSourceObject: {fileID: 4813131395366246970, guid: e397323928af987468249c710da6e91f,
+    type: 3}
+  m_PrefabInstance: {fileID: 5274828248447454709}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1095248446050768434 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5044294299769871303, guid: e397323928af987468249c710da6e91f,
+    type: 3}
+  m_PrefabInstance: {fileID: 5274828248447454709}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6567462443275379111 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1303691022564191314, guid: e397323928af987468249c710da6e91f,

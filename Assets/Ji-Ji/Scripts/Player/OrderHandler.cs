@@ -22,18 +22,20 @@ public class OrderHandler : MonoBehaviour
     private void OnEnable()
     {
         EventManager.Subscribe(typeof(KitchenEvent), kitchenEventHandler);
+        
     }
 
     private void OnDisable()
     {
         EventManager.Unsubscribe(typeof(KitchenEvent), kitchenEventHandler);
+        
     }
 
     //invoked when the player 
     private void OnKitchenEvent(KitchenEvent _event)
     {
-        hasOrder = true;
         EventManager.Subscribe(typeof(TableEvent), tableEventHandler);
+        EventManager.Subscribe(typeof(OrderCompletedEvent), orderCompletedEventHandler);
         orderNumber = _event.OrderNumber;
     }
 
@@ -44,7 +46,7 @@ public class OrderHandler : MonoBehaviour
 
     private void OnOrderCompletedEvent(OrderCompletedEvent _event)
     {
-        hasOrder = false;
         EventManager.Unsubscribe(typeof(TableEvent), tableEventHandler);
+        EventManager.Unsubscribe(typeof(OrderCompletedEvent), orderCompletedEventHandler);
     }
 }
