@@ -92,6 +92,10 @@ fabric.properties
 /[Ll]ogs/
 /[Uu]ser[Ss]ettings/
 
+#Fmod
+\[Ff]mod\ProjectJJ\.cache\
+\[Ff]mod\ProjectJJ\.user\
+
 # MemoryCaptures can get excessive in size.
 # They also could contain extremely sensitive data
 /[Mm]emoryCaptures/
