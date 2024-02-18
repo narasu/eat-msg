@@ -38,6 +38,7 @@ public class Table : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             triggerCount--;
+           
         }
     }
 

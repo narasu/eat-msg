@@ -4,7 +4,7 @@ using Cinemachine;
 using UnityEngine;
 
 [SaveDuringPlay][AddComponentMenu("")][ExecuteAlways]
-public class CameraRollClamp : CinemachineExtension
+public class CameraRollLock : CinemachineExtension
 {
     // Start is called before the first frame update
     void Start()

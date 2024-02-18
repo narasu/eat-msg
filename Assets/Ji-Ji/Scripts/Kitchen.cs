@@ -7,19 +7,20 @@ using Random = UnityEngine.Random;
 
 public class Kitchen : MonoBehaviour
 {
+    public Table[] tables;
     private int numberOfTables;
     private bool isReady = true;
     private bool playerIsWaiting;
     private int triggerCount;
     private int tableNumber;
     private Action<OrderCompletedEvent> orderCompletedEventHandler;
+    private Action<OrderFailedEvent> orderFailedEventHandler;
 
     private void OnEnable()
     {
         
         // lookup all tables and assign a number to each
         // TODO: move to separate class
-        var tables = FindObjectsOfType<Table>();
         for (int i = 0; i < tables.Length; i++)
         {
             tables[i].SetTableNumber(i+1);
@@ -30,12 +31,15 @@ public class Kitchen : MonoBehaviour
         
         // subscribe to OrderCompletedEvent so that when the player completes an order, the kitchen is ready with a new one
         orderCompletedEventHandler = OnOrderCompleted;
+        orderFailedEventHandler = OnOrderFailed;
         EventManager.Subscribe(typeof(OrderCompletedEvent), orderCompletedEventHandler);
+        EventManager.Subscribe(typeof(OrderFailedEvent), orderFailedEventHandler);
     }
     
     private void OnDisable()
     {
         EventManager.Unsubscribe(typeof(OrderCompletedEvent), orderCompletedEventHandler);
+        EventManager.Unsubscribe(typeof(OrderFailedEvent), orderFailedEventHandler);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -73,10 +77,17 @@ public class Kitchen : MonoBehaviour
         }
     }
 
-    private void OnOrderCompleted(OrderCompletedEvent _event)
+    private void OnOrderCompleted(OrderCompletedEvent _event) => CallNewOrder();
+
+    private void OnOrderFailed(OrderFailedEvent _event) => CallNewOrder();
+
+    private void CallNewOrder()
     {
-        isReady = true;
-        Debug.Log("Chef: \"Got a new order ready!\"");
+        if (!isReady)
+        {
+            isReady = true;
+            Debug.Log("Chef: \"Got a new order ready!\"");
+        }
     }
     
     //adding 1 to the random result because tables begin counting at 1 (and random.range is maxExclusive)
