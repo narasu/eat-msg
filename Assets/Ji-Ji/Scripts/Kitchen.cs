@@ -26,7 +26,7 @@ public class Kitchen : MonoBehaviour
             tables[i].SetTableNumber(i+1);
         }
         numberOfTables = tables.Length;
-        Debug.Log(numberOfTables);
+        // Debug.Log(numberOfTables);
         // end table lookup
         
         // subscribe to OrderCompletedEvent so that when the player completes an order, the kitchen is ready with a new one
