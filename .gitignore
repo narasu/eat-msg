@@ -95,6 +95,7 @@ fabric.properties
 #Fmod
 \[Ff]mod\ProjectJJ\.cache\
 \[Ff]mod\ProjectJJ\.user\
+.log/
 
 # MemoryCaptures can get excessive in size.
 # They also could contain extremely sensitive data
