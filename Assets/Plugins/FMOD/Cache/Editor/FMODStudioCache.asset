@@ -1,142 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-8628258917404772739
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/sfx/SFX_twist_body_part_release
-  m_EditorClassIdentifier: 
-  Path: event:/sfx/SFX_twist_body_part_release
-  Guid:
-    Data1: -240197474
-    Data2: 1284725775
-    Data3: -457870700
-    Data4: 57311938
-  Banks:
-  - {fileID: -3610815619662912936}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 6000
---- !u!114 &-7849794621917409620
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/sfx/SFX_break_glass_light
-  m_EditorClassIdentifier: 
-  Path: event:/sfx/SFX_break_glass_light
-  Guid:
-    Data1: -1953306024
-    Data2: 1305002212
-    Data3: -965117285
-    Data4: -339721406
-  Banks:
-  - {fileID: -3610815619662912936}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 2000
---- !u!114 &-6267472240319452208
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/sfx/SFX_break_glass_heavy
-  m_EditorClassIdentifier: 
-  Path: event:/sfx/SFX_break_glass_heavy
-  Guid:
-    Data1: -192661403
-    Data2: 1254224301
-    Data3: 1852194980
-    Data4: 142305517
-  Banks:
-  - {fileID: -3610815619662912936}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 2000
---- !u!114 &-4482939263473574380
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/sfx/SFX_impact_heavy
-  m_EditorClassIdentifier: 
-  Path: event:/sfx/SFX_impact_heavy
-  Guid:
-    Data1: 1183141315
-    Data2: 1112372996
-    Data3: -1573041769
-    Data4: -368263905
-  Banks:
-  - {fileID: -3610815619662912936}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 2000
---- !u!114 &-4379169420398730272
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/sfx/SFX_footsteps
-  m_EditorClassIdentifier: 
-  Path: event:/sfx/SFX_footsteps
-  Guid:
-    Data1: -1767256741
-    Data2: 1242917347
-    Data3: -969594235
-    Data4: 1701830481
-  Banks:
-  - {fileID: -3610815619662912936}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 1
-  Parameters:
-  - {fileID: 2621315926567023807}
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 8000
---- !u!114 &-3610815619662912936
+--- !u!114 &-6773641254908901877
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -148,15 +12,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
   m_Name: bank:/Master.bank
   m_EditorClassIdentifier: 
-  Path: Fmod/FMOD project GGJ 2024.1.3/Build/Desktop/Master.bank
+  Path: Fmod/ProjectJJ/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638438585576319538
+  lastModified: 638438123655675640
   FileSizes:
   - Name: Desktop
-    Value: 1560416
+    Value: 1574
   Exists: 1
---- !u!114 &-1431443353273221879
+--- !u!114 &-5075812649949814663
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: Fmod/ProjectJJ/Build/Desktop/Master.strings.bank
+  Name: Master.strings
+  StudioPath: bank:/Master.strings
+  lastModified: 638438123655675640
+  FileSizes:
+  - Name: Desktop
+    Value: 758
+  Exists: 1
+--- !u!114 &-4066672488987184507
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -166,23 +50,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/sfx/SFX_twist_body_part_grab
+  m_Name: event:/New Event
   m_EditorClassIdentifier: 
-  Path: event:/sfx/SFX_twist_body_part_grab
+  Path: event:/New Event
   Guid:
-    Data1: 1868222119
-    Data2: 1134421486
-    Data3: 709143209
-    Data4: 1579856518
+    Data1: 1463442512
+    Data2: 1325265586
+    Data3: 1792920987
+    Data4: -345806660
   Banks:
-  - {fileID: -3610815619662912936}
+  - {fileID: -6773641254908901877}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 6000
+  Length: 0
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -196,197 +80,14 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   EditorBanks:
-  - {fileID: 2880505597856778239}
-  - {fileID: -3610815619662912936}
+  - {fileID: -5075812649949814663}
+  - {fileID: -6773641254908901877}
   EditorEvents:
-  - {fileID: 8926958494875469824}
-  - {fileID: 3839184031696273877}
-  - {fileID: 2391844836257059417}
-  - {fileID: -7849794621917409620}
-  - {fileID: -4379169420398730272}
-  - {fileID: -6267472240319452208}
-  - {fileID: -8628258917404772739}
-  - {fileID: -1431443353273221879}
-  - {fileID: -4482939263473574380}
+  - {fileID: -4066672488987184507}
   EditorParameters: []
   MasterBanks:
-  - {fileID: -3610815619662912936}
+  - {fileID: -6773641254908901877}
   StringsBanks:
-  - {fileID: 2880505597856778239}
-  cacheTime: 638438585576319538
+  - {fileID: -5075812649949814663}
+  cacheTime: 638438123655675640
   cacheVersion: 131609
---- !u!114 &793147580487022472
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/BG_music/Player_velocity
-  m_EditorClassIdentifier: 
-  Name: Player_velocity
-  StudioPath: 
-  Min: 0
-  Max: 100
-  Default: 0
-  ID:
-    data1: 2107449091
-    data2: 1917486690
-  Type: 0
-  IsGlobal: 0
-  Labels: []
-  Exists: 1
---- !u!114 &2391844836257059417
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/music/BG_music
-  m_EditorClassIdentifier: 
-  Path: event:/music/BG_music
-  Guid:
-    Data1: -153138107
-    Data2: 1267542302
-    Data3: 362171039
-    Data4: -540740803
-  Banks:
-  - {fileID: -3610815619662912936}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 0
-  Parameters:
-  - {fileID: 793147580487022472}
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 113366
---- !u!114 &2621315926567023807
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/SFX_footsteps/player_velocity_2
-  m_EditorClassIdentifier: 
-  Name: player_velocity_2
-  StudioPath: 
-  Min: 0
-  Max: 100
-  Default: 0
-  ID:
-    data1: 2187961017
-    data2: 2902151189
-  Type: 0
-  IsGlobal: 0
-  Labels: []
-  Exists: 1
---- !u!114 &2880505597856778239
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.strings.bank
-  m_EditorClassIdentifier: 
-  Path: Fmod/FMOD project GGJ 2024.1.3/Build/Desktop/Master.strings.bank
-  Name: Master.strings
-  StudioPath: bank:/Master.strings
-  lastModified: 638438585576319538
-  FileSizes:
-  - Name: Desktop
-    Value: 1316
-  Exists: 1
---- !u!114 &2937780718949839883
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/SFX_twist_body_part_loop/twist_velocity
-  m_EditorClassIdentifier: 
-  Name: twist_velocity
-  StudioPath: 
-  Min: 0
-  Max: 100
-  Default: 0
-  ID:
-    data1: 4238508089
-    data2: 752521399
-  Type: 0
-  IsGlobal: 0
-  Labels: []
-  Exists: 1
---- !u!114 &3839184031696273877
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/sfx/SFX_impact_light
-  m_EditorClassIdentifier: 
-  Path: event:/sfx/SFX_impact_light
-  Guid:
-    Data1: 1020097544
-    Data2: 1275514924
-    Data3: 1173141135
-    Data4: -432816609
-  Banks:
-  - {fileID: -3610815619662912936}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 2040
---- !u!114 &8926958494875469824
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/sfx/SFX_twist_body_part_loop
-  m_EditorClassIdentifier: 
-  Path: event:/sfx/SFX_twist_body_part_loop
-  Guid:
-    Data1: 10370566
-    Data2: 1250219030
-    Data3: 1011830670
-    Data4: -1564983959
-  Banks:
-  - {fileID: -3610815619662912936}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 0
-  Parameters:
-  - {fileID: 2937780718949839883}
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 1270
