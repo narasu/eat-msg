@@ -38,6 +38,12 @@ public class EventManager
             _callback = default;
             return false;
         }
+
+        if (eventDictionary[_event.GetType()] == null)
+        {
+            _callback = default;
+            return false;
+        }
         _callback = (T)eventDictionary[_event.GetType()]?.DynamicInvoke(_event);
         return _callback != null;
     }
