@@ -16,6 +16,7 @@ public class Dienblad : MonoBehaviour
     private bool isFallen;
 
     private Action<KitchenEvent> kitchenEventHandler;
+    private Action<OrderCompletedEvent> orderCompletedEventHandler;
 
     private void Awake()
     {
@@ -23,6 +24,10 @@ public class Dienblad : MonoBehaviour
         initialPosition = transform.localPosition;
         initialRotation = transform.localRotation;
         kitchenEventHandler = ResetDienblad;
+        orderCompletedEventHandler = _ => gameObject.SetActive(false);
+        EventManager.Subscribe(typeof(KitchenEvent), kitchenEventHandler);
+        EventManager.Subscribe(typeof(OrderCompletedEvent), orderCompletedEventHandler);
+        gameObject.SetActive(false);
     }
 
     private void FixedUpdate()
@@ -46,14 +51,11 @@ public class Dienblad : MonoBehaviour
         }
     }
 
-    private void OnEnable()
-    {
-        EventManager.Subscribe(typeof(KitchenEvent), kitchenEventHandler);
-    }
 
-    private void OnDisable()
+    private void OnDestroy()
     {
         EventManager.Unsubscribe(typeof(KitchenEvent), kitchenEventHandler);
+        EventManager.Unsubscribe(typeof(OrderCompletedEvent), orderCompletedEventHandler);
     }
 
     private void DienBladMovement()
@@ -101,6 +103,7 @@ public class Dienblad : MonoBehaviour
 
     private void ResetDienblad(KitchenEvent _event)
     {
+        gameObject.SetActive(true);
         transform.SetParent(Hand.transform);
         transform.localPosition = initialPosition;
         transform.localRotation = initialRotation;
