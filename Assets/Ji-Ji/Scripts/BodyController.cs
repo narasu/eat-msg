@@ -9,6 +9,8 @@ public class BodyController : MonoBehaviour
     public SphereCollider MovementBounds;
     public Dienblad dienBladScript;
 
+    public static Vector3 PlayerVelocity;
+
     //delegates
     public Action<float, float> eventTick;
     [SerializeField] private Animator animator;
@@ -44,6 +46,8 @@ public class BodyController : MonoBehaviour
 
     private void Update()
     {
+        Rigidbody rb = GetComponent<Rigidbody>();
+
         walkAxis = Input.GetAxisRaw("Vertical");
         turnAxis = Input.GetAxisRaw("Horizontal");
         strafeAxis = Input.GetAxisRaw("Strafe");
@@ -60,15 +64,15 @@ public class BodyController : MonoBehaviour
         transform.Rotate(Vector3.up, angularVelocity);
 
         //body mouse movement
-        if (!Mouse0IsDown && !Mouse1IsDown) 
+        if (!Mouse0IsDown && !Mouse1IsDown)
         {
             torsoNode.transform.Rotate(-Vector3.right, mouseX * Time.deltaTime * 120.0f);
         }
 
         Vector3 newSpeed = Vector3.Lerp(velocity, relativeForward * WalkSpeed + relativeStrafe * WalkSpeed, Friction);
         velocity = new Vector3(newSpeed.x, -9.81f, newSpeed.z);
+        PlayerVelocity = velocity;
         characterController.Move(velocity * Time.deltaTime);
-
 
         //andere scripts
         eventTick?.Invoke(mouseX, mouseY);
