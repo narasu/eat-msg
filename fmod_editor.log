@@ -7,80 +7,21 @@
 [LOG] OutputWASAPI::init                       : Output buffer size: 4096 samples, latency: 0.00ms, period: 10.00ms, DSP buffer: 1024 * 4
 [LOG] Thread::initThread                       : Init FMOD stream thread. Affinity: 0x4000000000000003, Priority: 0xFFFF7FFB, Stack Size: 98304, Semaphore: No, Sleep Time: 10, Looping: Yes.
 [LOG] Thread::initThread                       : Init FMOD mixer thread. Affinity: 0x4000000000000001, Priority: 0xFFFF7FFA, Stack Size: 81920, Semaphore: No, Sleep Time: 0, Looping: Yes.
-[LOG] AsyncManager::init                       : manager 000002042A045BC8 isAsync 0 updatePeriod 0.02
+[LOG] AsyncManager::init                       : manager 00000156D3CAD028 isAsync 0 updatePeriod 0.02
 [LOG] AsyncManager::init                       : done
 [LOG] PlaybackSystem::init                     : 
 [LOG] Thread::initThread                       : Init FMOD Studio sample load thread. Affinity: 0x4000000000000003, Priority: 0xFFFF7FFD, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
 [LOG] PlaybackSystem::init                     : done
 [LOG] Thread::initThread                       : Init FMOD Studio bank load thread. Affinity: 0x4000000000000003, Priority: 0xFFFF7FFD, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
 [LOG] Manager::init                            : done.
-[LOG] SystemI::createSound                     : filename = Fmod/FMOD project GGJ 2024.1.3/Build/Desktop/Master.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] AsyncThread::add                         : add sound to async queue : soundi = 0000020417272E18, queue head = 0000020429396758, queue count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000020417272E18
-[LOG] SystemI::createSoundInternal             :     Create name='Fmod/FMOD project GGJ 2024.1.3/Build/Desktop/Master.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1837856
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 57728
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000201871C1670
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 7447
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='waltz', format=5, channels=2, frequency=48000, lengthbytes=1242336, lengthpcm=5441600, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.426758.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000020417272E18
-[LOG] SoundI::release                          : waltz (000002042A71EB88)
-[LOG] SoundI::release                          :     waltz (0000020317C6AFE8)
-[LOG] SoundI::release                          :     waltz (000002042A71CED8)
-[LOG] SystemI::mixerSuspend                    : Suspending output.
-[LOG] SystemI::mixerResume                     : Resuming output.
-[LOG] AsyncThread::add                         : add sound to async queue : soundi = 0000020417273D48, queue head = 0000020429396758, queue count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000020417273D48
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000020417273D48
-[LOG] SoundI::release                          : waltz (0000020417272E18)
-[LOG] SoundI::release                          :     waltz (000002033B551388)
-[LOG] SoundI::release                          :     waltz (0000020417273D48)
-[LOG] SoundI::release                          :  (0000020429221C88)
-[LOG] SoundI::release                          :     Glass, Break, Bottle, Smash x3 SND37412 1 (000002033B551868)
-[LOG] SoundI::release                          :  (000002042921F898)
-[LOG] SoundI::release                          :     Glass, Break, Bottle, Smash x3 SND37412 2 (00000204172CE9C8)
-[LOG] SoundI::release                          :  (000002042921FA08)
-[LOG] SoundI::release                          :     Glass, Break, Bottle, Smash x3 SND37412 3 (000002033B5516C8)
-[LOG] SoundI::release                          :  (0000020429222DC8)
-[LOG] SoundI::release                          :     Glass, Break, Glass Chandelier, Break On Hard Carpet Smash Shatter Clink Debris 01 SND61294 (00000204172CEEA8)
-[LOG] SoundI::release                          :  (000002042921FB78)
-[LOG] SoundI::release                          :     Glass, Break, Glass Chandelier, Break On Hard Carpet Smash Shatter Clink Debris 01 SND61294 1 (00000204172CED08)
-[LOG] SoundI::release                          :  (0000020429222AE8)
-[LOG] SoundI::release                          :     Glass, Break, Glassware Breaking, Big Smash SND60029 (000002033B550B68)
-[LOG] SoundI::release                          :  (0000020429222978)
-[LOG] SoundI::release                          :     Glass, Break, Glassware Breaking, Big Smash SND60029 1 (00000204172CF1E8)
-[LOG] SoundI::release                          :  (0000020429220B48)
-[LOG] SoundI::release                          :     Gore, Squish, Squeezing, Cracking, Bloody, Flesh, Bones, Creature Eating 12 SND10639 (00000203D5982D68)
-[LOG] SoundI::release                          :  (0000020429222528)
-[LOG] SoundI::release                          :     Gore, Squish, Squeeze, Thin, Guts, Flesh 01 SND10614 2 (00000203D5983728)
-[LOG] SoundI::release                          :  (0000020429222248)
-[LOG] SoundI::release                          :     Gore, Squish, Squeeze, Thin, Guts, Flesh 01 SND10614 3 (00000203D59830A8)
-[LOG] SoundI::release                          :  (000002042921F448)
-[LOG] SoundI::release                          :     Bullets, Impact, Hit, Metal 01 SND50289 (00000203D5983588)
-[LOG] SoundI::release                          :  (0000020429222698)
-[LOG] SoundI::release                          :     Bullets, Impact, Hit, Metal 01 SND50289 1 (00000203D59833E8)
-[LOG] Thread::callback                         : FMOD Studio update thread finished.
-[LOG] Thread::callback                         : FMOD Studio bank load thread finished.
-[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
-[LOG] Thread::callback                         : FMOD Studio sample load thread finished.
-[LOG] LiveUpdate::release                      : 
-[LOG] LiveUpdate::reset                        : Reset connection (reason Disconnected)
-[LOG] Thread::callback                         : FMOD stream thread finished.
-[LOG] Thread::callback                         : FMOD mixer thread finished.
-[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
-[LOG] SystemI::close                           : Closed.
-[LOG] Thread::callback                         : FMOD Studio bank load thread finished.
-[LOG] Thread::callback                         : FMOD Studio sample load thread finished.
-[LOG] LiveUpdate::release                      : 
-[LOG] LiveUpdate::reset                        : Reset connection (reason Disconnected)
-[LOG] Thread::callback                         : FMOD stream thread finished.
-[LOG] Thread::callback                         : FMOD mixer thread finished.
-[LOG] SystemI::close                           : Closed.
-[LOG] Thread::callback                         : FMOD nonblocking thread (0) finished.
-[LOG] Thread::callback                         : FMOD file thread finished.
+[LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 142)
+[LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 142)
+[LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 142)
+[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
+[LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 142)
+[LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 142)
+[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
+[LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 142)
+[LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 142)
+[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
+[ERR] assert                                   : assertion: 'gSystemInitCount == 0' failed
