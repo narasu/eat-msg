@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Dienblad
 {
-    private float mouseX, mouseY;
+    private float mouseX, mouseY, moveSpeed = 20;
     public GameObject Hand;
     public SphereCollider SphereBounds;
 
@@ -20,11 +20,12 @@ public class Dienblad
         DienBladMovement();
         DienBladVerticalAxis();
     }
+
     private void DienBladMovement()
     {
         if (BodyController.Mouse0IsDown && !BodyController.Mouse1IsDown)
         {
-            Vector3 tempMovement = (Camera.main.transform.right * mouseX + Camera.main.transform.forward * mouseY) * Time.deltaTime * 120;
+            Vector3 tempMovement = (Camera.main.transform.right * mouseX + Camera.main.transform.forward * mouseY) * Time.deltaTime * moveSpeed;
             Vector3 proposedPosition = Hand.transform.position + tempMovement;
 
             // Clampt de voorgestelde positie binnen de bounds van de SphereCollider
@@ -52,7 +53,7 @@ public class Dienblad
         if (!BodyController.Mouse0IsDown && BodyController.Mouse1IsDown)
         {
             Vector3 temp = Hand.transform.forward * -mouseY;
-            Vector3 tempMovement = temp * Time.deltaTime * 120;
+            Vector3 tempMovement = temp * Time.deltaTime * moveSpeed;
             Vector3 proposedPosition = Hand.transform.position + tempMovement;
 
             // Clampt de voorgestelde positie binnen de bounds van de SphereCollider
