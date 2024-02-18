@@ -1,31 +1,66 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Dienblad
+public class Dienblad : MonoBehaviour
 {
     private float mouseX, mouseY, moveSpeed = 20;
     public GameObject Hand;
     public SphereCollider SphereBounds;
+    private Rigidbody rb;
 
-    public Dienblad(SphereCollider _sphereBounds)
+    private Vector3 initialPosition;
+    private Quaternion initialRotation;
+
+    private bool isFallen;
+
+    private Action<KitchenEvent> kitchenEventHandler;
+
+    private void Awake()
     {
-        SphereBounds = _sphereBounds;
+        rb = GetComponent<Rigidbody>();
+        initialPosition = transform.localPosition;
+        initialRotation = transform.localRotation;
+        kitchenEventHandler = ResetDienblad;
     }
 
-    public void OnTick(float mouseX, float mouseY)
+    private void FixedUpdate()
     {
-        this.mouseX = mouseX;
-        this.mouseY = mouseY;
+        mouseX = Input.GetAxis("Mouse X");
+        mouseY = Input.GetAxis("Mouse Y");
+        
         DienBladMovement();
         DienBladVerticalAxis();
+    }
+
+    private void OnCollisionEnter(Collision other)
+    {
+        if (!other.collider.CompareTag("Player") && !isFallen)
+        {
+            transform.SetParent(null);
+            rb.constraints = RigidbodyConstraints.None;
+            Debug.Log("dienblad is gevallen oeps");
+            EventManager.Invoke(new OrderFailedEvent());
+            isFallen = true;
+        }
+    }
+
+    private void OnEnable()
+    {
+        EventManager.Subscribe(typeof(KitchenEvent), kitchenEventHandler);
+    }
+
+    private void OnDisable()
+    {
+        EventManager.Unsubscribe(typeof(KitchenEvent), kitchenEventHandler);
     }
 
     private void DienBladMovement()
     {
         if (BodyController.Mouse0IsDown && !BodyController.Mouse1IsDown)
         {
-            Vector3 tempMovement = (Camera.main.transform.right * mouseX + Camera.main.transform.forward * mouseY) * Time.deltaTime * moveSpeed;
+            Vector3 tempMovement = (Camera.main.transform.right * mouseX + Camera.main.transform.forward * mouseY) * (Time.deltaTime * moveSpeed);
             Vector3 proposedPosition = Hand.transform.position + tempMovement;
 
             // Clampt de voorgestelde positie binnen de bounds van de SphereCollider
@@ -53,7 +88,7 @@ public class Dienblad
         if (!BodyController.Mouse0IsDown && BodyController.Mouse1IsDown)
         {
             Vector3 temp = Hand.transform.forward * -mouseY;
-            Vector3 tempMovement = temp * Time.deltaTime * moveSpeed;
+            Vector3 tempMovement = temp * (Time.deltaTime * moveSpeed);
             Vector3 proposedPosition = Hand.transform.position + tempMovement;
 
             // Clampt de voorgestelde positie binnen de bounds van de SphereCollider
@@ -61,8 +96,18 @@ public class Dienblad
 
             // Pas de geclampte positie toe
             Hand.transform.position = proposedPosition;
-
-            Debug.Log("muist1 werkt");
         }
     }
+
+    private void ResetDienblad(KitchenEvent _event)
+    {
+        transform.SetParent(Hand.transform);
+        transform.localPosition = initialPosition;
+        transform.localRotation = initialRotation;
+        rb.constraints = RigidbodyConstraints.FreezeAll;
+        rb.velocity = Vector3.zero;
+        rb.angularVelocity = Vector3.zero;
+        isFallen = false;
+    }
+
 }

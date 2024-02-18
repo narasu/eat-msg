@@ -5,12 +5,12 @@ using UnityEngine;
 public class BodyController : MonoBehaviour
 {
     //sphere collider
-    [SerializeField]
-    public SphereCollider MovementBounds;
-    public Dienblad dienBladScript;
+    // [SerializeField]
+    // public SphereCollider MovementBounds;
+    // public Dienblad dienBladScript;
 
     //delegates
-    public Action<float, float> eventTick;
+    //public Action<float, float> eventTick;
     [SerializeField] private Animator animator;
     public float WalkSpeed, TurnSpeed, Friction;
     [SerializeField] private GameObject torsoNode, hand;
@@ -22,7 +22,7 @@ public class BodyController : MonoBehaviour
 
     private void Awake()
     {
-        dienBladScript = new Dienblad(MovementBounds);
+        //dienBladScript = new Dienblad(MovementBounds);
 
         characterController = GetComponent<CharacterController>();
 
@@ -31,15 +31,15 @@ public class BodyController : MonoBehaviour
 
     private void Start()
     {
-        if (hand != null)
+        /*if (hand != null)
         {
             dienBladScript.Hand = hand;
         }
-        eventTick += dienBladScript.OnTick;
+        eventTick += dienBladScript.OnTick;*/
     }
     private void OnDestroy()
     {
-        eventTick = null;
+        //eventTick = null;
     }
 
     private void Update()
@@ -68,12 +68,12 @@ public class BodyController : MonoBehaviour
         Vector3 newSpeed = Vector3.Lerp(velocity, relativeForward * WalkSpeed + relativeStrafe * WalkSpeed, Friction);
         velocity = new Vector3(newSpeed.x, -9.81f, newSpeed.z);
         characterController.Move(velocity * Time.deltaTime);
-
-
-        //andere scripts
-        eventTick?.Invoke(mouseX, mouseY);
+        
     }
 
-
+    private void FixedUpdate()
+    {
+        // eventTick?.Invoke(mouseX, mouseY);
+    }
 }
 
