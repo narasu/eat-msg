@@ -22,7 +22,7 @@ public class Table : MonoBehaviour
                 {
                     if (orderNumber == tableNumber)
                     {
-                        Debug.Log("\"Thank you!\"");
+                        EventManager.Invoke(new MessageEvent("\"Thank you!\""));
                         // the correct order has arrived to this table
                         EventManager.Invoke(new OrderCompletedEvent());
                     }
