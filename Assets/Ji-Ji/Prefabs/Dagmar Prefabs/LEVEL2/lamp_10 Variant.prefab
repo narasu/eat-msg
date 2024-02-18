@@ -64,8 +64,79 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6400000, guid: 344e5762a3ded474b8be97f39d244812, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: 344e5762a3ded474b8be97f39d244812,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3999591563294441601}
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: 344e5762a3ded474b8be97f39d244812,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -8767756770853786864}
   m_SourcePrefab: {fileID: 100100000, guid: 344e5762a3ded474b8be97f39d244812, type: 3}
+--- !u!1 &6290414240136289197 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: 344e5762a3ded474b8be97f39d244812,
+    type: 3}
+  m_PrefabInstance: {fileID: 6290414240136191245}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &3999591563294441601
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6290414240136289197}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300018, guid: 1cf37901e12cba8439af82bc295c09f4, type: 3}
+--- !u!114 &-8767756770853786864
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6290414240136289197}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: Player
+  EventReference:
+    Guid:
+      Data1: 1183141315
+      Data2: 1112372996
+      Data3: -1573041769
+      Data4: -368263905
+    Path: event:/sfx/SFX_impact_heavy
+  Event: 
+  PlayEvent: 3
+  StopEvent: 2
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
