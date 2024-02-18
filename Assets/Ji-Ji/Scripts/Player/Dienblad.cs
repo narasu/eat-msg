@@ -45,7 +45,7 @@ public class Dienblad : MonoBehaviour
         {
             transform.SetParent(null);
             rb.constraints = RigidbodyConstraints.None;
-            Debug.Log("dienblad is gevallen oeps");
+            EventManager.Invoke(new MessageEvent("OOPS"));
             EventManager.Invoke(new OrderFailedEvent());
             isFallen = true;
         }

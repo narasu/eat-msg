@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{4eb0c91c-5b7e-413c-864f-8aafd5e004bc}">
+		<property name="assetPath">
+			<value>Designed, Bass Dive, Trailer Sub, Fall Down, Short, Clean 01 SND35987.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>96</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>1.3440000000000001</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{f64f62a3-ab11-45a3-9581-dad6a26b2fc7}</destination>
+		</relationship>
+	</object>
+</objects>

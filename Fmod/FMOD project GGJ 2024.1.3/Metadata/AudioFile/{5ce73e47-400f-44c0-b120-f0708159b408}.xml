@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{5ce73e47-400f-44c0-b120-f0708159b408}">
+		<property name="assetPath">
+			<value>Cloth, Impact, Pillow, Hits SND8233 6.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>96</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.19805208333333332</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{f64f62a3-ab11-45a3-9581-dad6a26b2fc7}</destination>
+		</relationship>
+	</object>
+</objects>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{f0df7916-6b5c-487d-96ed-8e346dea1b49}">
+		<property name="assetPath">
+			<value>Electricity, Arc, Heavy Power, Impact, Static 02 SND13455.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>96</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>1.2092083333333334</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{f64f62a3-ab11-45a3-9581-dad6a26b2fc7}</destination>
+		</relationship>
+	</object>
+</objects>

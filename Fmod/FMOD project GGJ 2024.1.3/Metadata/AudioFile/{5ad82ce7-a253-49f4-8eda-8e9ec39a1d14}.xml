@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{5ad82ce7-a253-49f4-8eda-8e9ec39a1d14}">
+		<property name="assetPath">
+			<value>Metal, Movement, Metal Pipe, Light, Drag On Sand, Rubble, Short Scrapes, Soft SND63603 1.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>96</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.46970833333333334</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{f64f62a3-ab11-45a3-9581-dad6a26b2fc7}</destination>
+		</relationship>
+	</object>
+</objects>

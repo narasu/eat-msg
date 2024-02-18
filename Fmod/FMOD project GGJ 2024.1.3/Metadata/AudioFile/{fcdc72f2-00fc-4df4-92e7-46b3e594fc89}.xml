@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{fcdc72f2-00fc-4df4-92e7-46b3e594fc89}">
+		<property name="assetPath">
+			<value>Electricity, Sparks, Electricity SND81685.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>96</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>1.9764062499999999</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{f64f62a3-ab11-45a3-9581-dad6a26b2fc7}</destination>
+		</relationship>
+	</object>
+</objects>

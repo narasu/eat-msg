@@ -34,6 +34,8 @@ public class Kitchen : MonoBehaviour
         orderFailedEventHandler = OnOrderFailed;
         EventManager.Subscribe(typeof(OrderCompletedEvent), orderCompletedEventHandler);
         EventManager.Subscribe(typeof(OrderFailedEvent), orderFailedEventHandler);
+        
+        EventManager.Invoke(new MessageEvent($"Chef: \"First order is ready, come and get it!\""));
     }
     
     private void OnDisable()
@@ -60,7 +62,7 @@ public class Kitchen : MonoBehaviour
         {
             RandomizeTable();
             EventManager.Invoke(new KitchenEvent(tableNumber));
-            Debug.Log($"Chef: \"Table number {tableNumber}!\"");
+            EventManager.Invoke(new MessageEvent($"Chef: \"Table number {tableNumber}!\""));
             isReady = false;
         }
     }
@@ -86,7 +88,7 @@ public class Kitchen : MonoBehaviour
         if (!isReady)
         {
             isReady = true;
-            Debug.Log("Chef: \"Got a new order ready!\"");
+            EventManager.Invoke(new MessageEvent("Chef: \"Got a new order ready!\""));
         }
     }
     
